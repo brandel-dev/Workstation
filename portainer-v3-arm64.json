@@ -2,162 +2,95 @@
   "version": "3",
   "templates": [
     {
-      "id": 2001,
+      "id": 3001,
+      "type": 1,
+      "title": "Alpine Linux ARM64",
+      "description": "Contenedor Alpine mínimo.",
+      "platform": "linux",
+      "image": "alpine:3.22",
+      "command": "sleep infinity",
+      "interactive": true
+    },
+    {
+      "id": 3002,
+      "type": 1,
+      "title": "Debian ARM64",
+      "description": "Contenedor Debian estable.",
+      "platform": "linux",
+      "image": "debian:13-slim",
+      "command": "sleep infinity",
+      "interactive": true
+    },
+    {
+      "id": 3003,
+      "type": 1,
+      "title": "Ubuntu ARM64",
+      "description": "Contenedor Ubuntu para pruebas.",
+      "platform": "linux",
+      "image": "ubuntu:24.04",
+      "command": "sleep infinity",
+      "interactive": true
+    },
+    {
+      "id": 3004,
+      "type": 1,
+      "title": "Nginx ARM64",
+      "description": "Servidor web Nginx.",
+      "platform": "linux",
+      "image": "nginx:1.27-alpine",
+      "ports": [
+        "80/tcp"
+      ]
+    },
+    {
+      "id": 3005,
       "type": 1,
       "title": "Caddy ARM64",
-      "description": "Servidor web y proxy inverso con HTTPS automático.",
-      "categories": [
-        "webserver",
-        "proxy"
-      ],
+      "description": "Servidor web Caddy.",
       "platform": "linux",
       "image": "caddy:2-alpine",
       "ports": [
         "80/tcp",
-        "443/tcp",
-        "443/udp"
-      ],
-      "volumes": [
-        {
-          "container": "/data"
-        },
-        {
-          "container": "/config"
-        },
-        {
-          "container": "/etc/caddy"
-        }
-      ]
-    },
-    {
-      "id": 2002,
-      "type": 1,
-      "title": "Nginx ARM64",
-      "description": "Servidor web ligero.",
-      "categories": [
-        "webserver"
-      ],
-      "platform": "linux",
-      "image": "nginx:1.27-alpine",
-      "ports": [
-        "80/tcp",
         "443/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/usr/share/nginx/html"
-        },
-        {
-          "container": "/etc/nginx"
-        }
       ]
     },
     {
-      "id": 2003,
+      "id": 3006,
       "type": 1,
-      "title": "Jellyfin ARM64",
-      "description": "Servidor multimedia para películas, música y series.",
-      "categories": [
-        "media"
-      ],
+      "title": "Apache HTTPD ARM64",
+      "description": "Servidor web Apache.",
       "platform": "linux",
-      "image": "jellyfin/jellyfin:latest",
-      "ports": [
-        "8096/tcp",
-        "8920/tcp",
-        "7359/udp"
-      ],
-      "volumes": [
-        {
-          "container": "/config"
-        },
-        {
-          "container": "/cache"
-        },
-        {
-          "container": "/media"
-        }
-      ],
-      "note": "La transcodificación depende del hardware."
-    },
-    {
-      "id": 2004,
-      "type": 1,
-      "title": "Navidrome ARM64",
-      "description": "Servidor de música compatible con Subsonic.",
-      "categories": [
-        "media"
-      ],
-      "platform": "linux",
-      "image": "deluan/navidrome:latest",
-      "ports": [
-        "4533/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/data"
-        },
-        {
-          "container": "/music"
-        }
-      ]
-    },
-    {
-      "id": 2005,
-      "type": 1,
-      "title": "File Browser ARM64",
-      "description": "Administrador web de archivos.",
-      "categories": [
-        "storage"
-      ],
-      "platform": "linux",
-      "image": "filebrowser/filebrowser:latest",
+      "image": "httpd:2.4-alpine",
       "ports": [
         "80/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/srv"
-        },
-        {
-          "container": "/database"
-        },
-        {
-          "container": "/config"
-        }
       ]
     },
     {
-      "id": 2006,
+      "id": 3007,
       "type": 1,
-      "title": "Syncthing ARM64",
-      "description": "Sincronización directa de archivos.",
-      "categories": [
-        "storage",
-        "backup"
-      ],
+      "title": "BusyBox ARM64",
+      "description": "Contenedor mínimo para diagnóstico.",
       "platform": "linux",
-      "image": "syncthing/syncthing:latest",
+      "image": "busybox:1.36",
+      "command": "sleep 3600",
+      "interactive": true
+    },
+    {
+      "id": 3008,
+      "type": 1,
+      "title": "Redis ARM64",
+      "description": "Base de datos en memoria.",
+      "platform": "linux",
+      "image": "redis:7-alpine",
       "ports": [
-        "8384/tcp",
-        "22000/tcp",
-        "22000/udp",
-        "21027/udp"
-      ],
-      "volumes": [
-        {
-          "container": "/var/syncthing"
-        }
+        "6379/tcp"
       ]
     },
     {
-      "id": 2007,
+      "id": 3009,
       "type": 1,
       "title": "MariaDB ARM64",
       "description": "Base de datos compatible con MySQL.",
-      "categories": [
-        "database"
-      ],
       "platform": "linux",
       "image": "mariadb:11",
       "ports": [
@@ -167,36 +100,14 @@
         {
           "name": "MARIADB_ROOT_PASSWORD",
           "label": "Contraseña root"
-        },
-        {
-          "name": "MARIADB_DATABASE",
-          "label": "Base de datos",
-          "default": "app"
-        },
-        {
-          "name": "MARIADB_USER",
-          "label": "Usuario",
-          "default": "app"
-        },
-        {
-          "name": "MARIADB_PASSWORD",
-          "label": "Contraseña del usuario"
-        }
-      ],
-      "volumes": [
-        {
-          "container": "/var/lib/mysql"
         }
       ]
     },
     {
-      "id": 2008,
+      "id": 3010,
       "type": 1,
       "title": "PostgreSQL ARM64",
-      "description": "Base de datos relacional avanzada.",
-      "categories": [
-        "database"
-      ],
+      "description": "Base de datos PostgreSQL.",
       "platform": "linux",
       "image": "postgres:16-alpine",
       "ports": [
@@ -204,55 +115,16 @@
       ],
       "env": [
         {
-          "name": "POSTGRES_USER",
-          "label": "Usuario",
-          "default": "app"
-        },
-        {
           "name": "POSTGRES_PASSWORD",
           "label": "Contraseña"
-        },
-        {
-          "name": "POSTGRES_DB",
-          "label": "Base de datos",
-          "default": "app"
-        }
-      ],
-      "volumes": [
-        {
-          "container": "/var/lib/postgresql/data"
         }
       ]
     },
     {
-      "id": 2009,
-      "type": 1,
-      "title": "Redis ARM64",
-      "description": "Caché y almacén de datos en memoria.",
-      "categories": [
-        "database",
-        "cache"
-      ],
-      "platform": "linux",
-      "image": "redis:7-alpine",
-      "ports": [
-        "6379/tcp"
-      ],
-      "command": "redis-server --appendonly yes",
-      "volumes": [
-        {
-          "container": "/data"
-        }
-      ]
-    },
-    {
-      "id": 2010,
+      "id": 3011,
       "type": 1,
       "title": "MongoDB ARM64",
-      "description": "Base de datos documental NoSQL.",
-      "categories": [
-        "database"
-      ],
+      "description": "Base de datos documental MongoDB.",
       "platform": "linux",
       "image": "mongo:8",
       "ports": [
@@ -268,295 +140,214 @@
           "name": "MONGO_INITDB_ROOT_PASSWORD",
           "label": "Contraseña root"
         }
-      ],
-      "volumes": [
-        {
-          "container": "/data/db"
-        },
-        {
-          "container": "/data/configdb"
-        }
       ]
     },
     {
-      "id": 2011,
+      "id": 3012,
       "type": 1,
-      "title": "MinIO ARM64",
-      "description": "Almacenamiento de objetos compatible con S3.",
-      "categories": [
-        "storage"
-      ],
+      "title": "Jellyfin ARM64",
+      "description": "Servidor multimedia Jellyfin.",
       "platform": "linux",
-      "image": "quay.io/minio/minio:latest",
+      "image": "jellyfin/jellyfin:latest",
       "ports": [
-        "9000/tcp",
-        "9001/tcp"
-      ],
-      "command": "server /data --console-address :9001",
-      "env": [
-        {
-          "name": "MINIO_ROOT_USER",
-          "label": "Usuario root",
-          "default": "minioadmin"
-        },
-        {
-          "name": "MINIO_ROOT_PASSWORD",
-          "label": "Contraseña root"
-        }
-      ],
-      "volumes": [
-        {
-          "container": "/data"
-        }
+        "8096/tcp",
+        "8920/tcp"
       ]
     },
     {
-      "id": 2012,
+      "id": 3013,
+      "type": 1,
+      "title": "Navidrome ARM64",
+      "description": "Servidor de música Navidrome.",
+      "platform": "linux",
+      "image": "deluan/navidrome:latest",
+      "ports": [
+        "4533/tcp"
+      ]
+    },
+    {
+      "id": 3014,
+      "type": 1,
+      "title": "File Browser ARM64",
+      "description": "Administrador web de archivos.",
+      "platform": "linux",
+      "image": "filebrowser/filebrowser:latest",
+      "ports": [
+        "80/tcp"
+      ]
+    },
+    {
+      "id": 3015,
+      "type": 1,
+      "title": "Syncthing ARM64",
+      "description": "Sincronización de archivos.",
+      "platform": "linux",
+      "image": "syncthing/syncthing:latest",
+      "ports": [
+        "8384/tcp",
+        "22000/tcp"
+      ]
+    },
+    {
+      "id": 3016,
       "type": 1,
       "title": "Mosquitto ARM64",
-      "description": "Broker MQTT para IoT.",
-      "categories": [
-        "iot",
-        "messaging"
-      ],
+      "description": "Broker MQTT.",
       "platform": "linux",
       "image": "eclipse-mosquitto:2",
       "ports": [
-        "1883/tcp",
-        "8883/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/mosquitto/config"
-        },
-        {
-          "container": "/mosquitto/data"
-        },
-        {
-          "container": "/mosquitto/log"
-        }
+        "1883/tcp"
       ]
     },
     {
-      "id": 2013,
+      "id": 3017,
       "type": 1,
       "title": "Node-RED ARM64",
-      "description": "Automatización visual e integración de servicios.",
-      "categories": [
-        "automation",
-        "iot"
-      ],
+      "description": "Automatización visual.",
       "platform": "linux",
       "image": "nodered/node-red:latest",
       "ports": [
         "1880/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/data"
-        }
       ]
     },
     {
-      "id": 2014,
+      "id": 3018,
       "type": 1,
       "title": "Uptime Kuma ARM64",
-      "description": "Monitor de disponibilidad con panel web.",
-      "categories": [
-        "monitoring"
-      ],
+      "description": "Monitor de disponibilidad.",
       "platform": "linux",
       "image": "louislam/uptime-kuma:1",
       "ports": [
         "3001/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/app/data"
-        }
       ]
     },
     {
-      "id": 2015,
+      "id": 3019,
       "type": 1,
       "title": "Dozzle ARM64",
       "description": "Visor web de logs Docker.",
-      "categories": [
-        "monitoring",
-        "management"
-      ],
       "platform": "linux",
       "image": "amir20/dozzle:latest",
       "ports": [
         "8080/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/var/run/docker.sock",
-          "bind": "/var/run/docker.sock",
-          "ro": true
-        }
       ]
     },
     {
-      "id": 2016,
+      "id": 3020,
       "type": 1,
       "title": "Portainer Agent ARM64",
-      "description": "Agente para administrar otro Docker Engine.",
-      "categories": [
-        "management"
-      ],
+      "description": "Agente Portainer.",
       "platform": "linux",
       "image": "portainer/agent:latest",
       "ports": [
         "9001/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/var/run/docker.sock",
-          "bind": "/var/run/docker.sock"
-        },
-        {
-          "container": "/var/lib/docker/volumes",
-          "bind": "/var/lib/docker/volumes"
-        }
       ]
     },
     {
-      "id": 2017,
+      "id": 3021,
       "type": 1,
       "title": "Watchtower ARM64",
-      "description": "Actualización automática de contenedores.",
-      "categories": [
-        "management"
-      ],
+      "description": "Actualizador de contenedores.",
       "platform": "linux",
-      "image": "containrrr/watchtower:latest",
-      "env": [
-        {
-          "name": "WATCHTOWER_CLEANUP",
-          "label": "Eliminar imágenes antiguas",
-          "default": "true",
-          "preset": true
-        },
-        {
-          "name": "WATCHTOWER_SCHEDULE",
-          "label": "Programación cron",
-          "default": "0 0 4 * * *"
-        }
-      ],
-      "volumes": [
-        {
-          "container": "/var/run/docker.sock",
-          "bind": "/var/run/docker.sock"
-        }
-      ]
+      "image": "containrrr/watchtower:latest"
     },
     {
-      "id": 2018,
+      "id": 3022,
       "type": 1,
       "title": "SFTPGo ARM64",
-      "description": "Servidor SFTP, FTP, WebDAV y HTTP.",
-      "categories": [
-        "storage",
-        "network"
-      ],
+      "description": "Servidor SFTP y WebDAV.",
       "platform": "linux",
       "image": "drakkan/sftpgo:latest",
       "ports": [
         "2022/tcp",
-        "8080/tcp",
-        "10080/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/var/lib/sftpgo"
-        },
-        {
-          "container": "/srv/sftpgo"
-        }
+        "8080/tcp"
       ]
     },
     {
-      "id": 2019,
+      "id": 3023,
       "type": 1,
       "title": "Vaultwarden ARM64",
-      "description": "Servidor compatible con clientes Bitwarden.",
-      "categories": [
-        "security"
-      ],
+      "description": "Servidor Bitwarden compatible.",
       "platform": "linux",
       "image": "vaultwarden/server:latest",
       "ports": [
         "80/tcp"
-      ],
-      "env": [
-        {
-          "name": "SIGNUPS_ALLOWED",
-          "label": "Permitir registros",
-          "default": "false"
-        }
-      ],
-      "volumes": [
-        {
-          "container": "/data"
-        }
-      ],
-      "note": "Usar siempre detrás de HTTPS."
+      ]
     },
     {
-      "id": 2020,
+      "id": 3024,
       "type": 1,
-      "title": "Alpine ARM64",
-      "description": "Contenedor mínimo para pruebas y utilidades.",
-      "categories": [
-        "development",
-        "operating-system"
-      ],
+      "title": "MinIO ARM64",
+      "description": "Almacenamiento compatible con S3.",
       "platform": "linux",
-      "image": "alpine:3.22",
-      "interactive": true,
-      "command": "/bin/sh"
+      "image": "minio/minio:latest",
+      "command": "server /data --console-address :9001",
+      "ports": [
+        "9000/tcp",
+        "9001/tcp"
+      ]
     },
     {
-      "id": 2021,
-      "type": 1,
-      "title": "Debian ARM64",
-      "description": "Contenedor Debian para administración y desarrollo.",
-      "categories": [
-        "development",
-        "operating-system"
-      ],
-      "platform": "linux",
-      "image": "debian:13-slim",
-      "interactive": true,
-      "command": "/bin/bash"
-    },
-    {
-      "id": 2022,
+      "id": 3025,
       "type": 1,
       "title": "Python ARM64",
-      "description": "Entorno Python para scripts y servicios.",
-      "categories": [
-        "development"
-      ],
+      "description": "Entorno Python.",
       "platform": "linux",
       "image": "python:3.13-slim",
-      "interactive": true,
-      "command": "/bin/bash"
+      "command": "sleep infinity",
+      "interactive": true
     },
     {
-      "id": 2023,
+      "id": 3026,
       "type": 1,
       "title": "Node.js ARM64",
-      "description": "Entorno Node.js para aplicaciones web.",
-      "categories": [
-        "development"
-      ],
+      "description": "Entorno Node.js.",
       "platform": "linux",
       "image": "node:22-bookworm-slim",
-      "interactive": true,
-      "command": "/bin/bash"
+      "command": "sleep infinity",
+      "interactive": true
+    },
+    {
+      "id": 3027,
+      "type": 1,
+      "title": "PHP ARM64",
+      "description": "Entorno PHP CLI.",
+      "platform": "linux",
+      "image": "php:8.3-cli",
+      "command": "sleep infinity",
+      "interactive": true
+    },
+    {
+      "id": 3028,
+      "type": 1,
+      "title": "Go ARM64",
+      "description": "Entorno de desarrollo Go.",
+      "platform": "linux",
+      "image": "golang:1.24-alpine",
+      "command": "sleep infinity",
+      "interactive": true
+    },
+    {
+      "id": 3029,
+      "type": 1,
+      "title": "cAdvisor ARM64",
+      "description": "Métricas de contenedores Docker.",
+      "platform": "linux",
+      "image": "gcr.io/cadvisor/cadvisor:latest",
+      "ports": [
+        "8080/tcp"
+      ]
+    },
+    {
+      "id": 3030,
+      "type": 1,
+      "title": "Registry ARM64",
+      "description": "Registro privado de imágenes Docker.",
+      "platform": "linux",
+      "image": "registry:3",
+      "ports": [
+        "5000/tcp"
+      ]
     }
   ]
 }
