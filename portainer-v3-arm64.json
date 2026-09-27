@@ -1,16 +1,20 @@
 {
-  "version": "3",
+  "version": "2",
   "templates": [
     {
       "id": 1,
       "type": 1,
       "title": "Registry",
       "description": "Docker image registry",
-      "categories": ["docker"],
+      "categories": [
+        "docker"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
       "image": "registry:latest",
-      "ports": ["5000/tcp"],
+      "ports": [
+        "5000/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/registry"
@@ -22,11 +26,15 @@
       "type": 1,
       "title": "Registry (cache)",
       "description": "Docker image registry configured as a DockerHub pull through cache",
-      "categories": ["docker"],
+      "categories": [
+        "docker"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
       "image": "registry:latest",
-      "ports": ["5000/tcp"],
+      "ports": [
+        "5000/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/registry"
@@ -45,7 +53,9 @@
       "type": 1,
       "title": "Ubuntu",
       "description": "Debian-based Linux operating system",
-      "categories": ["operating-system"],
+      "categories": [
+        "operating-system"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
       "image": "ubuntu:latest",
@@ -57,7 +67,9 @@
       "type": 1,
       "title": "NodeJS",
       "description": "JavaScript-based platform for server-side and networking applications",
-      "categories": ["development"],
+      "categories": [
+        "development"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
       "image": "node:latest",
@@ -69,11 +81,16 @@
       "type": 1,
       "title": "Nginx",
       "description": "High performance web server",
-      "categories": ["webserver"],
+      "categories": [
+        "webserver"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
       "image": "nginx:latest",
-      "ports": ["80/tcp", "443/tcp"],
+      "ports": [
+        "80/tcp",
+        "443/tcp"
+      ],
       "volumes": [
         {
           "container": "/etc/nginx"
@@ -88,11 +105,15 @@
       "type": 1,
       "title": "Httpd",
       "description": "Open-source HTTP server",
-      "categories": ["webserver"],
+      "categories": [
+        "webserver"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/httpd.png",
       "image": "httpd:latest",
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/usr/local/apache2/htdocs/"
@@ -104,11 +125,15 @@
       "type": 1,
       "title": "Caddy",
       "description": "Open-source web server with automatic HTTPS written in Go",
-      "categories": ["webserver"],
+      "categories": [
+        "webserver"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
       "image": "caddy:latest",
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/data"
@@ -120,7 +145,9 @@
       "type": 1,
       "title": "MySQL",
       "description": "The most popular open-source database",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
       "image": "mysql/mysql-server:5.7",
@@ -135,7 +162,9 @@
           "preset": true
         }
       ],
-      "ports": ["3306/tcp"],
+      "ports": [
+        "3306/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/mysql"
@@ -147,7 +176,9 @@
       "type": 1,
       "title": "MariaDB",
       "description": "Performance beyond MySQL",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
       "image": "mariadb:latest",
@@ -157,7 +188,9 @@
           "label": "Root password"
         }
       ],
-      "ports": ["3306/tcp"],
+      "ports": [
+        "3306/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/mysql"
@@ -169,7 +202,9 @@
       "type": 1,
       "title": "PostgreSQL",
       "description": "The most advanced open-source database",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
       "image": "postgres:latest",
@@ -183,7 +218,9 @@
           "label": "Superuser password"
         }
       ],
-      "ports": ["5432/tcp"],
+      "ports": [
+        "5432/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/postgresql/data"
@@ -195,11 +232,15 @@
       "type": 1,
       "title": "Mongo",
       "description": "Open-source document-oriented database",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mongo.png",
       "image": "mongo:latest",
-      "ports": ["27017/tcp"],
+      "ports": [
+        "27017/tcp"
+      ],
       "volumes": [
         {
           "container": "/data/db"
@@ -211,11 +252,16 @@
       "type": 1,
       "title": "CrateDB",
       "description": "An open-source distributed SQL database",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cratedb.png",
       "image": "crate:latest",
-      "ports": ["4200/tcp", "4300/tcp"],
+      "ports": [
+        "4200/tcp",
+        "4300/tcp"
+      ],
       "volumes": [
         {
           "container": "/data"
@@ -227,11 +273,16 @@
       "type": 1,
       "title": "Elasticsearch",
       "description": "Open-source search and analytics engine",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
       "image": "docker.elastic.co/elasticsearch/elasticsearch:7.15.1",
-      "ports": ["9200/tcp", "9300/tcp"],
+      "ports": [
+        "9200/tcp",
+        "9300/tcp"
+      ],
       "volumes": [
         {
           "container": "/usr/share/elasticsearch/data"
@@ -244,11 +295,18 @@
       "title": "GitLab CE",
       "description": "Open-source end-to-end software development platform",
       "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/ee/install/docker.html\" target=\"_blank\">GitLab documentation</a> to get started.",
-      "categories": ["development", "project-management"],
+      "categories": [
+        "development",
+        "project-management"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/gitlab_ce.png",
       "image": "gitlab/gitlab-ce:latest",
-      "ports": ["80/tcp", "443/tcp", "22/tcp"],
+      "ports": [
+        "80/tcp",
+        "443/tcp",
+        "22/tcp"
+      ],
       "volumes": [
         {
           "container": "/etc/gitlab"
@@ -266,11 +324,16 @@
       "type": 1,
       "title": "Minio",
       "description": "A distributed object storage server built for cloud applications and devops",
-      "categories": ["storage"],
+      "categories": [
+        "storage"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
       "image": "quay.io/minio/minio:latest",
-      "ports": ["9000/tcp", "9001/tcp"],
+      "ports": [
+        "9000/tcp",
+        "9001/tcp"
+      ],
       "env": [
         {
           "name": "MINIO_ROOT_USER",
@@ -296,11 +359,15 @@
       "type": 1,
       "title": "Scality S3",
       "description": "Standalone AWS S3 protocol server",
-      "categories": ["storage"],
+      "categories": [
+        "storage"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/scality-s3.png",
       "image": "scality/s3server",
-      "ports": ["8000/tcp"],
+      "ports": [
+        "8000/tcp"
+      ],
       "env": [
         {
           "name": "SCALITY_ACCESS_KEY",
@@ -325,12 +392,16 @@
       "type": 1,
       "title": "SQL Server",
       "description": "Microsoft SQL Server on Linux",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "linux",
       "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
       "image": "mcr.microsoft.com/mssql/server:2019-latest",
-      "ports": ["1433/tcp"],
+      "ports": [
+        "1433/tcp"
+      ],
       "env": [
         {
           "name": "ACCEPT_EULA",
@@ -348,12 +419,16 @@
       "type": 1,
       "title": "SQL Server",
       "description": "Microsoft SQL Server Developer for Windows containers",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "windows",
       "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
       "image": "microsoft/mssql-server-windows-developer:latest",
-      "ports": ["1433/tcp"],
+      "ports": [
+        "1433/tcp"
+      ],
       "env": [
         {
           "name": "ACCEPT_EULA",
@@ -376,12 +451,16 @@
       "type": 1,
       "title": "SQL Server Express",
       "description": "Microsoft SQL Server Express for Windows containers",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "windows",
       "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
       "image": "microsoft/mssql-server-windows-express:latest",
-      "ports": ["1433/tcp"],
+      "ports": [
+        "1433/tcp"
+      ],
       "env": [
         {
           "name": "ACCEPT_EULA",
@@ -404,11 +483,15 @@
       "type": 1,
       "title": "Solr",
       "description": "Open-source enterprise search platform",
-      "categories": ["search-engine"],
+      "categories": [
+        "search-engine"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/solr.png",
       "image": "solr:latest",
-      "ports": ["8983/tcp"],
+      "ports": [
+        "8983/tcp"
+      ],
       "volumes": [
         {
           "container": "/opt/solr/mydata"
@@ -420,11 +503,15 @@
       "type": 1,
       "title": "Redis",
       "description": "Open-source in-memory data structure store",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
       "image": "redis:latest",
-      "ports": ["6379/tcp"],
+      "ports": [
+        "6379/tcp"
+      ],
       "volumes": [
         {
           "container": "/data"
@@ -437,7 +524,9 @@
       "title": "Swarm monitoring",
       "description": "Monitor your cluster performances with Prometheus & Grafana",
       "note": "Requires Docker version 19.03.0+. <b>Make sure to add the <code>monitoring == true</code> one of your Swarm manager node before deploying this stack.</b>",
-      "categories": ["Monitoring"],
+      "categories": [
+        "Monitoring"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
       "repository": {
@@ -461,7 +550,9 @@
       "type": 2,
       "title": "Redis Cluster",
       "description": "Open-source in-memory data structure store - Cluster mode",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
       "repository": {
@@ -480,11 +571,16 @@
       "type": 1,
       "title": "RabbitMQ",
       "description": "Highly reliable enterprise messaging system",
-      "categories": ["messaging"],
+      "categories": [
+        "messaging"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/rabbitmq.png",
       "image": "rabbitmq:latest",
-      "ports": ["5671/tcp", "5672/tcp"],
+      "ports": [
+        "5671/tcp",
+        "5672/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/rabbitmq"
@@ -496,12 +592,16 @@
       "type": 1,
       "title": "Ghost",
       "description": "Free and open-source blogging platform",
-      "categories": ["blog"],
+      "categories": [
+        "blog"
+      ],
       "note": "Access the blog management interface under <code>/ghost/</code>.",
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ghost.png",
       "image": "ghost:latest",
-      "ports": ["2368/tcp"],
+      "ports": [
+        "2368/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/ghost/content"
@@ -513,7 +613,9 @@
       "type": 1,
       "title": "Joomla",
       "description": "Another free and open-source CMS",
-      "categories": ["CMS"],
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png",
       "image": "joomla:latest",
@@ -528,7 +630,9 @@
           "label": "Database password"
         }
       ],
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/www/html"
@@ -540,11 +644,15 @@
       "type": 1,
       "title": "Drupal",
       "description": "Open-source content management framework",
-      "categories": ["CMS"],
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/drupal.png",
       "image": "drupal:latest",
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/www/html"
@@ -557,11 +665,15 @@
       "title": "Plone",
       "description": "A free and open-source CMS built on top of Zope",
       "note": "Default user and password are admin/admin",
-      "categories": ["CMS"],
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/plone.png",
       "image": "plone:latest",
-      "ports": ["8080/tcp"],
+      "ports": [
+        "8080/tcp"
+      ],
       "volumes": [
         {
           "container": "/data"
@@ -573,7 +685,10 @@
       "type": 1,
       "title": "Sematext Docker Agent",
       "description": "Collect logs, metrics and docker events",
-      "categories": ["Log Management", "Monitoring"],
+      "categories": [
+        "Log Management",
+        "Monitoring"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
       "image": "sematext/sematext-agent-docker:latest",
@@ -601,7 +716,9 @@
       "type": 1,
       "title": "Datadog agent",
       "description": "Collect events and metrics",
-      "categories": ["Monitoring"],
+      "categories": [
+        "Monitoring"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
       "image": "datadog/agent:latest",
@@ -634,7 +751,9 @@
       "type": 1,
       "title": "Mautic",
       "description": "Open-source marketing automation platform",
-      "categories": ["marketing"],
+      "categories": [
+        "marketing"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mautic.png",
       "image": "mautic/mautic:latest",
@@ -649,7 +768,9 @@
           "label": "Database password"
         }
       ],
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/www/html"
@@ -661,11 +782,16 @@
       "type": 1,
       "title": "Jenkins",
       "description": "Open-source continuous integration tool",
-      "categories": ["continuous-integration"],
+      "categories": [
+        "continuous-integration"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/jenkins.png",
       "image": "jenkins/jenkins:lts-jdk11",
-      "ports": ["8080/tcp", "50000/tcp"],
+      "ports": [
+        "8080/tcp",
+        "50000/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/jenkins_home"
@@ -678,11 +804,15 @@
       "title": "Redmine",
       "description": "Open-source project management tool",
       "note": "Default user and password are admin/admin",
-      "categories": ["project-management"],
+      "categories": [
+        "project-management"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
       "image": "redmine:latest",
-      "ports": ["3000/tcp"],
+      "ports": [
+        "3000/tcp"
+      ],
       "volumes": [
         {
           "container": "/usr/src/redmine/files"
@@ -695,11 +825,16 @@
       "title": "File browser",
       "description": "A web file manager",
       "note": "Default credentials: admin/admin",
-      "categories": ["filesystem", "storage"],
+      "categories": [
+        "filesystem",
+        "storage"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
       "image": "filebrowser/filebrowser:latest",
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/data"
@@ -715,7 +850,9 @@
       "type": 1,
       "title": "CommandBox",
       "description": "ColdFusion (CFML) CLI",
-      "categories": ["development"],
+      "categories": [
+        "development"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-commandbox.png",
       "image": "ortussolutions/commandbox:latest",
@@ -726,14 +863,19 @@
           "preset": true
         }
       ],
-      "ports": ["8080/tcp", "8443/tcp"]
+      "ports": [
+        "8080/tcp",
+        "8443/tcp"
+      ]
     },
     {
       "id": 36,
       "type": 1,
       "title": "ContentBox",
       "description": "Open-source modular CMS",
-      "categories": ["CMS"],
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-contentbox.png",
       "image": "ortussolutions/contentbox:latest",
@@ -754,7 +896,10 @@
           "preset": true
         }
       ],
-      "ports": ["8080/tcp", "8443/tcp"],
+      "ports": [
+        "8080/tcp",
+        "8443/tcp"
+      ],
       "volumes": [
         {
           "container": "/data/contentbox/db"
@@ -769,10 +914,16 @@
       "type": 1,
       "title": "Dokku",
       "description": "Dokku setup as a container",
-      "categories": ["PaaS"],
+      "categories": [
+        "PaaS"
+      ],
       "platform": "linux",
       "image": "dokku/dokku",
-      "ports": ["22/tcp", "80/tcp", "443/tcp"],
+      "ports": [
+        "22/tcp",
+        "80/tcp",
+        "443/tcp"
+      ],
       "volumes": [
         {
           "container": "/mnt/dokku",
@@ -802,11 +953,15 @@
       "type": 1,
       "title": "Floating License Server",
       "description": "License Server for Softing edgeConnector products",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
       "image": "softingindustrial/floating-license-server:latest",
-      "ports": ["6200/tcp"],
+      "ports": [
+        "6200/tcp"
+      ],
       "interactive": true,
       "volumes": [
         {
@@ -820,7 +975,9 @@
       "title": "Portainer Agent",
       "description": "Manage all the resources in your Swarm cluster",
       "note": "The agent will be deployed globally inside your cluster and available on port 9001.",
-      "categories": ["portainer"],
+      "categories": [
+        "portainer"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
       "repository": {
@@ -835,7 +992,9 @@
       "name": "func",
       "description": "Serverless functions made simple",
       "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080. <b>Warning</b>: the name of the stack must be 'func'.",
-      "categories": ["serverless"],
+      "categories": [
+        "serverless"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/openfaas.png",
       "repository": {
@@ -849,7 +1008,9 @@
       "title": "IronFunctions",
       "description": "Open-source serverless computing platform",
       "note": "Deploys the IronFunctions API and UI.",
-      "categories": ["serverless"],
+      "categories": [
+        "serverless"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ironfunctions.png",
       "repository": {
@@ -863,7 +1024,9 @@
       "title": "CockroachDB",
       "description": "CockroachDB cluster",
       "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
-      "categories": ["database"],
+      "categories": [
+        "database"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
       "repository": {
@@ -877,7 +1040,9 @@
       "title": "WordPress",
       "description": "WordPress setup with a MySQL database",
       "note": "Deploys a WordPress instance connected to a MySQL database.",
-      "categories": ["CMS"],
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
       "repository": {
@@ -898,7 +1063,9 @@
       "title": "WordPress",
       "description": "WordPress setup with a MySQL database",
       "note": "Deploys a WordPress instance connected to a MySQL database.",
-      "categories": ["CMS"],
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
       "repository": {
@@ -919,7 +1086,9 @@
       "title": "OpenAMT",
       "description": "OpenAMT Cloud Toolkit",
       "note": "MPS password needs to be 8-32 characters including one uppercase, one lowercase letters, one base-10 digit and one special character.",
-      "categories": ["Cloud"],
+      "categories": [
+        "Cloud"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
       "repository": {
@@ -965,7 +1134,9 @@
       "type": 2,
       "title": "Microsoft OMS Agent",
       "description": "Microsoft Operations Management Suite Linux agent.",
-      "categories": ["OPS"],
+      "categories": [
+        "OPS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
       "repository": {
@@ -989,7 +1160,10 @@
       "id": 48,
       "title": "Sematext Docker Agent",
       "type": 2,
-      "categories": ["Log Management", "Monitoring"],
+      "categories": [
+        "Log Management",
+        "Monitoring"
+      ],
       "description": "Collect logs, metrics and docker events",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
       "platform": "linux",
@@ -1012,7 +1186,9 @@
       "id": 49,
       "title": "Datadog agent",
       "type": 2,
-      "categories": ["Monitoring"],
+      "categories": [
+        "Monitoring"
+      ],
       "description": "Collect events and metrics",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
       "platform": "linux",
@@ -1054,7 +1230,9 @@
       "type": 3,
       "title": "Dokku",
       "description": "Dokku setup as a compose file",
-      "categories": ["PaaS"],
+      "categories": [
+        "PaaS"
+      ],
       "platform": "linux",
       "repository": {
         "url": "https://github.com/portainer/templates",
@@ -1109,7 +1287,9 @@
       "type": 2,
       "title": "LiveSwitch",
       "description": "A basic LiveSwitch stack with gateway, caching, database and media server",
-      "categories": ["media"],
+      "categories": [
+        "media"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
       "repository": {
@@ -1128,7 +1308,9 @@
       "type": 3,
       "title": "LiveSwitch",
       "description": "A basic LiveSwitch compose with gateway, caching, database and media server",
-      "categories": ["media"],
+      "categories": [
+        "media"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
       "repository": {
@@ -1147,7 +1329,9 @@
       "type": 3,
       "title": "TOSIBOX Lock for Container",
       "description": "Lock for Container brings secure connectivity inside your industrial IoT devices",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/tosibox.png",
       "repository": {
@@ -1164,7 +1348,9 @@
     {
       "id": 55,
       "type": 3,
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "title": "Softing EdgeConnector modbus",
       "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
       "note": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
@@ -1177,7 +1363,9 @@
     {
       "id": 56,
       "type": 3,
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "title": "Softing EdgeConnector 840D",
       "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
       "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
@@ -1189,7 +1377,9 @@
     {
       "id": 57,
       "type": 3,
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "title": "Softing EdgeConnector Siemens",
       "description": "Connect Siemens SIMATIC S7-300/400/1200/1500 PLCs and provide the data via OPC UA and MQTT",
       "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
@@ -1201,7 +1391,9 @@
     {
       "id": 58,
       "type": 3,
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "title": "Softing EdgeConnector FANUC CNC",
       "description": "Connect FANUC CNCs and provide the data via OPC UA and MQTT",
       "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
@@ -1219,7 +1411,9 @@
     {
       "id": 59,
       "type": 3,
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "title": "Softing EdgeConnector Aggregator",
       "description": "Offers a powerful OPC UA aggregation service which provides data via OPC UA, as well as MQTT",
       "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
@@ -1237,7 +1431,9 @@
     {
       "id": 60,
       "type": 3,
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "title": "OPC Router",
       "description": "No-code middleware for industrial applications The OPC Router connects PLCs, PCS, SCADA, MES, SQL databases and servers, label printers, e-mail servers and erp-systems via OPC UA, MQTT, REST, CSV and many others without any programming effort",
       "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
@@ -1274,7 +1470,9 @@
       "title": "Pro Mosquitto with Management Center",
       "description": "Commercial-grade Mosquitto MQTT broker with Management Center",
       "note": "The Mosquitto broker password must be at least 12 characters.",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cedalo.png",
       "repository": {
@@ -1307,7 +1505,9 @@
       "title": "Node-Red",
       "description": "Low-code programming for event-driven applications",
       "note": "The TZ must be in Unix Format eg America/New_York - see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://avatars.githubusercontent.com/u/5375661?s=200&v=4",
       "repository": {
@@ -1327,7 +1527,9 @@
       "title": "InfluxDB for Edge",
       "description": "InfluxDB Time Series Data Platformm - Single Server deployment",
       "note": "Admin Password must be at least 10 characters",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://store-images.s-microsoft.com/image/apps.61965.8c5e9f22-6a18-49a8-b8b9-6632de74e76c.3c45348f-0adf-4238-b024-bb993be0b664.ccdeeb79-9767-4e92-af5a-1b56f274aa99",
       "repository": {
@@ -1358,7 +1560,9 @@
       "type": 3,
       "title": "EMQX Open Source MQTT Broker",
       "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles - Single Broker deployment",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/docker-library/docs/68aa4264fa058f323993fdaceacd63a8acbbeb48/emqx/logo.svg",
       "repository": {
@@ -1381,7 +1585,9 @@
       "type": 3,
       "title": "Grafana Dashboard",
       "description": "Multi-platform open-source interactive visualization web application",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/1200px-Grafana_logo.svg.png",
       "repository": {
@@ -1405,7 +1611,9 @@
       "title": "Inductive Automation - Ignition Gateway",
       "description": "Ignition Gateway is the primary software service that drives everything in Ignition - Single Server Deployment",
       "note": "For TZ see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://pbs.twimg.com/profile_images/859108636504805376/QHpq7wuh_400x400.jpg",
       "repository": {
@@ -1423,7 +1631,7 @@
               "default": true
             }
           ]
-        }, 
+        },
         {
           "name": "adminuser",
           "label": "Gateway UI Admin Username"
@@ -1445,11 +1653,11 @@
               "value": "standard",
               "default": true
             },
-                        {
+            {
               "text": "Edge",
               "value": "edge"
             },
-                        {
+            {
               "text": "Maker",
               "value": "maker"
             }
@@ -1462,7 +1670,9 @@
       "type": 3,
       "title": "Timescale DB",
       "description": "Open-source time series database developed by Timescale Inc",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://pbs.twimg.com/profile_images/1658849767865167876/hA5OXD9m_400x400.jpg",
       "repository": {
@@ -1481,7 +1691,9 @@
       "type": 3,
       "title": "Manubes Edge Node",
       "description": "High-performance cloud platform for industrial production management. Manubes is a no-code solution that is used to structure, monitor and control production data, systems and processes in the cloud.",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/inray-manubes.png",
       "repository": {
@@ -1511,7 +1723,9 @@
       "type": 3,
       "title": "Anyviz Cloud Adaptor",
       "description": "The cloud adapter connects local devices via OPC-UA, Modbus, Siemens, Beckhoff ADS, EtherNet/IP, M-Bus and BACnet to the AnyViz Cloud.",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.cdn.digitaloceanspaces.com/logos/anyviz.png",
       "repository": {
@@ -1524,7 +1738,9 @@
       "type": 3,
       "title": "Litmus Edge",
       "description": "Litmus Edge is an edge data platform that enables industrial AI at scale. It connects, processes, and analyzes real-time OT data at the edge to power smart manufacturing.",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://www.gravatar.com/avatar/3c545a4e847eb960bfc9bf5bf877c979?s=120&r=g&d=404",
       "repository": {
@@ -1537,7 +1753,9 @@
       "type": 3,
       "title": "Litmus Edge Digital Factory Demo",
       "description": "Demo System for Litmus Edge. Litmus Edge is an edge data platform that enables industrial AI at scale. It connects, processes, and analyzes real-time OT data at the edge to power smart manufacturing. Note: Requires 5GB Disk Space / 3GB RAM available on the Host for deployment to succeed.",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://www.gravatar.com/avatar/3c545a4e847eb960bfc9bf5bf877c979?s=120&r=g&d=404",
       "repository": {
@@ -1551,7 +1769,11 @@
       "title": "Fuuz In-House Trial",
       "description": "Deploy the Fuuz AI-driven Industrial Intelligence Platform. Unify manufacturing operations across MES, WMS, CMMS, and Quality with built-in DataOps integration, rapid application development, and an event-native architecture — or build your own custom manufacturing applications.",
       "note": "For information on how to setup this template please visit our documentation here: https://support.fuuz.com/portal/en/kb/articles/setting-up-in-house-fuuz before you continue.",
-      "categories": ["OPS", "MES", "WMS"],
+      "categories": [
+        "OPS",
+        "MES",
+        "WMS"
+      ],
       "platform": "linux",
       "logo": "https://mfgx-public.s3.us-east-1.amazonaws.com/assets/Favicon_A_60x60.png",
       "repository": {
@@ -1770,11 +1992,18 @@
       "title": "Fuuz Device Gateway",
       "description": "A secure gateway that connects on-premise devices, PLCs, and data sources to the Fuuz Cloud for seamless, real-time integration.",
       "note": "Fill out the configuration below, by default this will be accessible at http://{IP_Address}:5500. If you have questions or issues with setup, review our documentation at support.fuuz.com or contact support at support@fuuz.com",
-      "categories": ["OPS", "MES", "WMS"],
+      "categories": [
+        "OPS",
+        "MES",
+        "WMS"
+      ],
       "platform": "linux",
       "logo": "https://mfgx-public.s3.us-east-1.amazonaws.com/assets/Favicon_A_60x60.png",
       "image": "public.ecr.aws/n9a9v7z5/mfgx-native-app-device-gateway-server:latest",
-      "ports": ["5500:5500/tcp", "5501:5501/tcp"],
+      "ports": [
+        "5500:5500/tcp",
+        "5501:5501/tcp"
+      ],
       "env": [
         {
           "name": "FUUZ_API_KEY",
@@ -1855,7 +2084,9 @@
       "title": "MaestroHub",
       "description": "Industrial data orchestrator with a Unified Namespace, drag-and-drop pipelines, and 40+ protocol connectors. Built-in MCP server brings AI agents into your operational data stack.",
       "note": "Welcome to MaestroHub!\n\n• Open http://&lt;host&gt;:8080 to create your admin account\n• MQTT clients can connect to &lt;host&gt;:1883 (TCP) or &lt;host&gt;:8083 (WebSocket)\n• Data persists in the maestrohub-data Docker volume — back it up before destroying the stack\n• Get started guide: https://docs.maestrohub.com/overview/get-started",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://avatars.githubusercontent.com/u/219120420?s=400&u=699c593f7490c79736e08eec580fd9af40278576&v=4",
       "repository": {
@@ -1868,7 +2099,9 @@
       "type": 3,
       "title": "SORBA SDE",
       "description": "The SORBA Smart Data Engine (SDE) is an industrial data collection/gateway device capable of Advanced Edge Analytics & Machine Learning Edge Processing. SORBA-SDE is equipped with multiple communication driver/protocol applicable to the industrial market. The SORBA-SDE is a sensor/hardware agnostic device that serves as your point & click gateway capable of talking to multiple devices in real-time. The SDE provides easy access to equipment for troubleshooting and remote programming support for PLCs & HMIs utilizing a hassle-free easy, set-up approach to your assets.",
-      "categories": ["edge"],
+      "categories": [
+        "edge"
+      ],
       "platform": "linux",
       "logo": "https://www.gravatar.com/avatar/ee83d0294a89e3dfabd7fcf304db4537?s=120&r=g&d=404",
       "repository": {
